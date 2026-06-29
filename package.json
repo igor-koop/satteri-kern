@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "satteri-kern",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Satteri plugin to render Typst math expressions using kern.",
+  "keywords": [
+    "kern",
+    "math",
+    "mathml",
+    "mdast",
+    "mdx",
+    "satteri",
+    "typst"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igor-koop/satteri-kern.git"
+  },
+  "files": [
+    "dist/index.d.ts",
+    "dist/index.d.ts.map",
+    "dist/index.js",
+    "dist/index.js.map"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "check": "oxfmt --check && oxlint && tsc --noEmit",
+    "check:fmt": "oxfmt --check",
+    "check:lint": "oxlint",
+    "check:type": "tsc --noEmit",
+    "fmt": "oxfmt",
+    "test": "vitest run",
+    "cov": "vitest run --coverage"
+  },
+  "dependencies": {
+    "kern-typ": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitest/coverage-v8": "^4.1.7",
+    "oxfmt": "^0.56.0",
+    "oxlint": "^1.71.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "satteri": "^0.9.3",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  },
+  "peerDependencies": {
+    "satteri": "^0.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
