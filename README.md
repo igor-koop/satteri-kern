@@ -26,13 +26,13 @@ const { html } = markdownToHtml("Euler: $e^(i pi) + 1 = 0$", {
 
 ## Options
 
-| Option       | Type                                                        | Default      | Description                                                        |
-| ------------ | ----------------------------------------------------------- | ------------ | ------------------------------------------------------------------ |
-| `output`     | `"mathml" \| "html" \| "htmlAndMathml"`                    | `"mathml"`   | Output format. `"html"` requires `kern-typ/kern.css`.              |
-| `errorColor` | `string`                                                    | `"#cc0000"`  | Color of the fallback error span when a math expression fails.     |
-| `macros`     | `Record<string, string>`                                    | —            | Custom macro definitions (`{ name: expansion }`).                  |
-| `trust`      | `boolean \| (ctx) => boolean`                              | `false`      | Allow kern to execute `\url` and similar commands.                 |
-| `strict`     | `boolean \| "ignore" \| "warn" \| "error"`                 | `"warn"`     | How kern handles unrecognised commands or non-fatal issues.        |
+| Option       | Type                                       | Default     | Description                                                    |
+| ------------ | ------------------------------------------ | ----------- | -------------------------------------------------------------- |
+| `output`     | `"mathml" \| "html" \| "htmlAndMathml"`    | `"mathml"`  | Output format. `"html"` requires `kern-typ/kern.css`.          |
+| `errorColor` | `string`                                   | `"#cc0000"` | Color of the fallback error span when a math expression fails. |
+| `macros`     | `Record<string, string>`                   | —           | Custom macro definitions (`{ name: expansion }`).              |
+| `trust`      | `boolean \| (ctx) => boolean`              | `false`     | Allow kern to execute `\url` and similar commands.             |
+| `strict`     | `boolean \| "ignore" \| "warn" \| "error"` | `"warn"`    | How kern handles unrecognised commands or non-fatal issues.    |
 
 ### Error handling
 
@@ -46,13 +46,13 @@ cd satteri-kern
 npm install
 ```
 
-| Script          | Description                                        |
-| --------------- | -------------------------------------------------- |
-| `npm run build` | Compile ESM and type declarations into `dist/`.    |
-| `npm test`      | Run the Vitest test suite.                         |
-| `npm run cov`   | Run tests with V8 coverage.                        |
-| `npm run check` | Format check, lint, and TypeScript typecheck.      |
-| `npm run fmt`   | Auto-format with oxfmt.                            |
+| Script          | Description                                     |
+| --------------- | ----------------------------------------------- |
+| `npm run build` | Compile ESM and type declarations into `dist/`. |
+| `npm test`      | Run the Vitest test suite.                      |
+| `npm run cov`   | Run tests with V8 coverage.                     |
+| `npm run check` | Format check, lint, and TypeScript typecheck.   |
+| `npm run fmt`   | Auto-format with oxfmt.                         |
 
 ## License
 
