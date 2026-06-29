@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/satteri-kern)](https://www.npmjs.com/package/satteri-kern) [![License](https://img.shields.io/github/license/igor-koop/satteri-kern)](https://github.com/igor-koop/satteri-kern/blob/main/LICENSE) [![Coverage](https://codecov.io/gh/igor-koop/satteri-kern/graph/badge.svg)](https://codecov.io/gh/igor-koop/satteri-kern) [![Lint](https://img.shields.io/badge/lint-oxlint-ea580c)](https://oxc.rs/docs/guide/usage/linter) [![Types](https://img.shields.io/badge/types-TypeScript-3178c6)](https://www.typescriptlang.org/) [![Actions](https://github.com/igor-koop/satteri-kern/actions/workflows/actions.yml/badge.svg)](https://github.com/igor-koop/satteri-kern/actions/workflows/actions.yml)
 
-Satteri plugin to render Typst math expressions to MathML using [kern-typ](https://github.com/igor-koop/kern-typ). Both inline (`$...$`) and display (`$$...$$`) math are supported, in Markdown and MDX.
+Satteri plugin to render Typst math expressions using [kern](https://github.com/tejasprabhune/kern).
 
 ## Installation
 
