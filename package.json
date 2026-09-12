@@ -50,12 +50,12 @@
     "oxlint": "^1.82.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "satteri": "^0.9.3",
+    "satteri": "^0.10.5",
     "typescript": "^7.0.2",
     "vitest": "^5.0.0"
   },
   "peerDependencies": {
-    "satteri": "^0.9.3"
+    "satteri": ">=0.7.0 <0.11.0"
   },
   "engines": {
     "node": ">=22"
