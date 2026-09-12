@@ -1,6 +1,5 @@
 import {
   defineMdastPlugin,
-  type MdastContent,
   type MdastNode,
   type MdastPluginInstance,
   type MdxJsxTextElement,
@@ -53,13 +52,14 @@ export interface SatteriKernOptions {
   readonly strict?: boolean | "ignore" | "warn" | "error";
 }
 
+/** Synchronous result of a satteri visitor. */
+type VisitorResult = Awaited<ReturnType<NonNullable<MdastPluginInstance["math"]>>>;
+
 /** The plugin instance type returned by {@link satteriKern}. */
 export interface SatteriKernPlugin {
   name: "satteri-kern";
-  math(...args: Parameters<NonNullable<MdastPluginInstance["math"]>>): MdastContent | void;
-  inlineMath(
-    ...args: Parameters<NonNullable<MdastPluginInstance["inlineMath"]>>
-  ): MdastContent | void;
+  math(...args: Parameters<NonNullable<MdastPluginInstance["math"]>>): VisitorResult;
+  inlineMath(...args: Parameters<NonNullable<MdastPluginInstance["inlineMath"]>>): VisitorResult;
 }
 
 /** {@link SatteriKernOptions} with defaults applied. */
@@ -122,7 +122,7 @@ export function satteriKern(options?: Readonly<SatteriKernOptions>): SatteriKern
     inlineMath(node, ctx) {
       const rendered = renderMath(node, false, config, ctx);
       if (isMdx(ctx.fileURL)) {
-        return createMdxInlineMath(rendered) as unknown as MdastContent;
+        return createMdxInlineMath(rendered);
       }
       return { type: "html" as const, value: rendered };
     },

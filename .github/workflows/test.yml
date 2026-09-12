@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        satteri: [lockfile, "0.9.3"]
+        satteri: [lockfile, "0.7"]
 
     steps:
       - name: Check out repository
