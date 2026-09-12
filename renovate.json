@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["!satteri", "!kern-typ"],
+      "enabled": false
+    },
+    {
+      "matchPackageNames": ["satteri"],
+      "matchUpdateTypes": ["patch"],
+      "enabled": false
+    }
+  ]
+}

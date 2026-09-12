@@ -43,16 +43,18 @@ When kern cannot render an expression it tries twice: first with strict errors, 
 ```sh
 git clone https://github.com/igor-koop/satteri-kern
 cd satteri-kern
-npm install
+mise install
+pnpm install
+hk install --mise
 ```
 
-| Script          | Description                                     |
-| --------------- | ----------------------------------------------- |
-| `npm run build` | Compile ESM and type declarations into `dist/`. |
-| `npm test`      | Run the Vitest test suite.                      |
-| `npm run cov`   | Run tests with V8 coverage.                     |
-| `npm run check` | Format check, lint, and TypeScript typecheck.   |
-| `npm run fmt`   | Auto-format with oxfmt.                         |
+| Command          | Description                                                         |
+| ---------------- | ------------------------------------------------------------------- |
+| `pnpm build`     | Compile ESM and type declarations into `dist/`.                     |
+| `pnpm test`      | Run the Vitest test suite.                                          |
+| `pnpm cov`       | Run tests with V8 coverage.                                         |
+| `hk check --all` | Run every check (format, lint, types, spelling, leaks).             |
+| `hk fix --all`   | Apply every available fix (formatting, whitespace, lint autofixes). |
 
 ## License
 
