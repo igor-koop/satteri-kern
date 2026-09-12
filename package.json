@@ -19,10 +19,8 @@
     "url": "https://github.com/igor-koop/satteri-kern.git"
   },
   "files": [
-    "dist/index.d.ts",
-    "dist/index.d.ts.map",
-    "dist/index.js",
-    "dist/index.js.map"
+    "dist/*.d.ts",
+    "dist/*.js"
   ],
   "type": "module",
   "sideEffects": false,
@@ -37,11 +35,6 @@
   },
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
-    "check": "oxfmt --check && oxlint && tsc --noEmit",
-    "check:fmt": "oxfmt --check",
-    "check:lint": "oxlint",
-    "check:type": "tsc --noEmit",
-    "fmt": "oxfmt",
     "test": "vitest run",
     "cov": "vitest run --coverage"
   },
@@ -65,6 +58,6 @@
     "satteri": "^0.9.3"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   }
 }
