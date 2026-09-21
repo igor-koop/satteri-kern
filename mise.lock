@@ -41,9 +41,9 @@ url_api = "https://api.github.com/repos/rhysd/actionlint/releases/assets/3849249
 provenance = "github-attestations"
 
 [[tools.betterleaks]]
-version = "v1.8.1"
+version = "1.8.1"
 backend = "aqua:betterleaks/betterleaks"
-specifiers = ["v1.8.1"]
+specifiers = ["1.8.1"]
 
 [tools.betterleaks."platforms.linux-arm64"]
 checksum = "sha256:bbb578b12a2f65d7082ab436abf37724232bc71d8a078e3c41336574420f1b48"
